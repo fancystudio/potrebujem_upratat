@@ -151,6 +151,78 @@ if($_POST['sendMail'] == "true"){
 		}else{
 			echo 'error';
 		}
+	}else if($_POST['identificator'] == "darcek"){
+		$mailInfo = "<table>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Meno objednávatela:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['menoObjednavatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Priezvisko objednávatela:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['priezviskoObjednavatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Adresa objednávatela:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['adresaObjednavatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Email objednávatela:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['emailObjednavatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Meno klienta:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['menoPrijimatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Priezvisko klienta:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['priezviskoPrijimatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Adresa klienta:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['adresaPrijimatel'];
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+			$mailInfo .= "<tr>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  "Cena darčekovej poukážky:";
+				$mailInfo .= "</td>";
+				$mailInfo .= "<td>";
+				$mailInfo .=  $_POST['cenaDarcek']." eur";
+				$mailInfo .= "</td>";
+			$mailInfo .= "</tr>";
+		$mailInfo .= "</table>";
+		if(mail("info@potrebujemupratat.sk","objednávka darčekovej poukážky - potrebujemupratat.sk",$mailInfo,"From:info@potrebujemupratat.sk \r\nMIME-Version: 1.0\r\nContent-type: text/html; charset=UTF-8\r\n")){
+			echo 'succes';
+		}else{
+			echo 'error';
+		}
 	}else{
 		echo 'error';
 	}

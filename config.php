@@ -11,7 +11,7 @@ $config['db_name'] = 'upratovanieTest';
 $config['db_prefix'] = 'cms_';
 $config['db_port'] = 3310;
 $config['timezone'] = 'Europe/Bratislava';
-$config['url_rewriting'] = 'mod_rewrite';
-$config['page_extension'] = '.html';
+//$config['url_rewriting'] = 'mod_rewrite';
+//$config['page_extension'] = '.html';
 $config['output_compression'] = true;
 ?>

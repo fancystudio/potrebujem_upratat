@@ -1,5 +1,6 @@
 var disableSendContact = false;
 var disableSendDotaznik = false;
+var disableSendDarcek = false;
 $(document).ready(function(){
   
 	$('input, textarea').placeholder();
@@ -28,6 +29,27 @@ $(document).ready(function(){
 				email : $("#dotaznikSpokojnosti .mailText").val()
 	  		};
 			  sendMail("dotaznik", data);
+		  }
+	  }
+  });
+  $("#darcekovaPoukazka #submitButtonDarcek").click(function(){
+	  if(!disableSendDarcek){
+		  console.log("cau");
+		  if(checkDarcekovaPoukazka()){
+			  data = {
+				identificator : "darcek",
+				sendMail : true,
+				menoObjednavatel : $("#darcekovaPoukazka .menoObjednavatelText").val(),
+				priezviskoObjednavatel : $("#darcekovaPoukazka .priezviskoObjednavatelText").val(),
+				adresaObjednavatel : $("#darcekovaPoukazka .adresaObjednavatelText").val(),
+				emailObjednavatel : $("#darcekovaPoukazka .emailObjednavatelText").val(),
+				menoPrijimatel : $("#darcekovaPoukazka .menoPrijimatelText").val(),
+				priezviskoPrijimatel : $("#darcekovaPoukazka .priezviskoPrijimatelText").val(),
+				adresaPrijimatel : $("#darcekovaPoukazka .adresaPrijimatelText").val(),
+				cenaDarcek : $("#darcekovaPoukazka .cenaDarcek").val(),
+				email : $("#darcekovaPoukazka .mailText").val()
+  			};
+			  sendMail("darcek", data);
 		  }
 	  }
   });
@@ -170,6 +192,18 @@ function checkDotaznikRow(){
 	emailIsOk = isEmailValid($("#dotaznikSpokojnosti .mailText"), "emailTextError");
 	return dotaznikRadioIsOk && addionalTextIsOk && emailIsOk;
 }
+function checkDarcekovaPoukazka(){
+	$("#darcekovaPoukazka .ds-error").css("display","none");
+	menoObjednavatel = notEmpty($("#darcekovaPoukazka .menoObjednavatelText"), "menoObjednavatelTextError");
+	priezviskoObjednavatel = notEmpty($("#darcekovaPoukazka .priezviskoObjednavatelText"), "priezviskoObjednavatelTextError");
+	adresaObjednavatel = notEmpty($("#darcekovaPoukazka .adresaObjednavatelText"), "adresaObjednavatelTextError");
+	menoPrijimatel = notEmpty($("#darcekovaPoukazka .menoPrijimatelText"), "menoPrijimatelTextError");
+	priezviskoPrijimatel = notEmpty($("#darcekovaPoukazka .priezviskoPrijimatelText"), "priezviskoPrijimatelTextError");
+	adresaPrijimatel = notEmpty($("#darcekovaPoukazka .adresaPrijimatelText"), "adresaPrijimatelTextError");
+	emailObjednavatel = isEmailValid($("#darcekovaPoukazka .emailObjednavatelText"), "emailObjednavatelTextError");
+	return menoObjednavatel && priezviskoObjednavatel && adresaObjednavatel && emailObjednavatel 
+		&& menoPrijimatel && priezviskoPrijimatel && adresaPrijimatel && emailObjednavatel;
+}
 function sendMail(identificator, data){
 	$.ajax({
 		type: "POST",
@@ -178,7 +212,7 @@ function sendMail(identificator, data){
 		cache: false,
 		beforeSend: function() 
 		{
-			//obraok odosielania
+			//obrazok odosielania
 		},
 		success: function(response)
 		{
@@ -186,9 +220,12 @@ function sendMail(identificator, data){
 				if(identificator == "kontakt"){
 					$(".kontakt-form .succes").show();
 					disableSendContact = true;
-				}else{
+				}else if("dotaznik"){
 					$("#dotaznikSpokojnosti .succes").show();
 					disableSendDotaznik = true;
+				}else if("darcek"){
+					$("#darcekovaPoukazka .succes").show();
+					disableSendDarcek = true;
 				}
 			}
 		}
