@@ -46,7 +46,7 @@ $(document).ready(function(){
 				menoPrijimatel : $("#darcekovaPoukazka .menoPrijimatelText").val(),
 				priezviskoPrijimatel : $("#darcekovaPoukazka .priezviskoPrijimatelText").val(),
 				adresaPrijimatel : $("#darcekovaPoukazka .adresaPrijimatelText").val(),
-				cenaDarcek : $("#darcekovaPoukazka .cenaDarcek").val(),
+				cenaDarcek : $("#darcekovaPoukazka .cenaPoukazky").val(),
 				email : $("#darcekovaPoukazka .mailText").val()
   			};
 			  sendMail("darcek", data);
@@ -201,8 +201,9 @@ function checkDarcekovaPoukazka(){
 	priezviskoPrijimatel = notEmpty($("#darcekovaPoukazka .priezviskoPrijimatelText"), "priezviskoPrijimatelTextError");
 	adresaPrijimatel = notEmpty($("#darcekovaPoukazka .adresaPrijimatelText"), "adresaPrijimatelTextError");
 	emailObjednavatel = isEmailValid($("#darcekovaPoukazka .emailObjednavatelText"), "emailObjednavatelTextError");
+	cenaPoukazky = selectNotEmpty($("#darcekovaPoukazka .cenaPoukazky"), "cenaPoukazkyError");
 	return menoObjednavatel && priezviskoObjednavatel && adresaObjednavatel && emailObjednavatel 
-		&& menoPrijimatel && priezviskoPrijimatel && adresaPrijimatel && emailObjednavatel;
+		&& menoPrijimatel && priezviskoPrijimatel && adresaPrijimatel && emailObjednavatel && cenaPoukazky;
 }
 function sendMail(identificator, data){
 	$.ajax({
@@ -220,10 +221,10 @@ function sendMail(identificator, data){
 				if(identificator == "kontakt"){
 					$(".kontakt-form .succes").show();
 					disableSendContact = true;
-				}else if("dotaznik"){
+				}else if(identificator == "dotaznik"){
 					$("#dotaznikSpokojnosti .succes").show();
 					disableSendDotaznik = true;
-				}else if("darcek"){
+				}else if(identificator == "darcek"){
 					$("#darcekovaPoukazka .succes").show();
 					disableSendDarcek = true;
 				}

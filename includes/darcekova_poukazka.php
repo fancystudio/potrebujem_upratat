@@ -64,14 +64,15 @@
 			</div>
 			cena poukážky
 			<div class="row">
-				<div class="col-md-12">
-				<p class="pull-left">Cena:</p>
-					<select class="cenaDarcek">
-						<option name="40">40</option>
-						<option name="60">60</option>
-						<option name="90">90</option>
-						<option name="120">120</option>
-					</select>
+				<div class="col-md-4">
+					<select name="cenaPoukazky" class="selectpicker form-control cenaPoukazky">
+					    <option value="first">Cena darčekovej poukážky</option>
+					    <option value="40">40 €</option>
+					    <option value="60">60 €</option>
+					    <option value="90">90 €</option>
+					    <option value="120">120 €</option>
+  					</select>
+  				<label class="ds-error pre-input cenaPoukazkyError" style="display:none">Musíte vybrať jednu z možností</label>
 				</div>
 			</div>
 			

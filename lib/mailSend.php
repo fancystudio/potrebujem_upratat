@@ -218,6 +218,7 @@ if($_POST['sendMail'] == "true"){
 				$mailInfo .= "</td>";
 			$mailInfo .= "</tr>";
 		$mailInfo .= "</table>";
+		echo $mailInfo;
 		if(mail("info@potrebujemupratat.sk","objednávka darčekovej poukážky - potrebujemupratat.sk",$mailInfo,"From:info@potrebujemupratat.sk \r\nMIME-Version: 1.0\r\nContent-type: text/html; charset=UTF-8\r\n")){
 			echo 'succes';
 		}else{
