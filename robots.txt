@@ -1,0 +1,10 @@
+Sitemap: http://www.potrebujemupratat.sk/sitemap.xml
+User-agent: *
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/admin/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/contrib/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/doc/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/lib/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/modules/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/plugins/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/scripts/
+Disallow: /data/k/r/kraft_1/potrebujemupratat.sk/web/tmp/

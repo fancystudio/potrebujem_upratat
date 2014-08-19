@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url>
+<loc>http://www.potrebujemupratat.sk/</loc>
+<lastmod>2014-06-13</lastmod>
+<changefreq>always</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>http://www.potrebujemupratat.sk/o-nas.html</loc>
+<lastmod>2014-04-14</lastmod>
+<changefreq>always</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://www.potrebujemupratat.sk/nase-sluzby.html</loc>
+<lastmod>2014-06-12</lastmod>
+<changefreq>always</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://www.potrebujemupratat.sk/dotaznik-spokojnosti.html</loc>
+<lastmod>2014-04-11</lastmod>
+<changefreq>always</changefreq>
+<priority>0.8</priority>
+</url>
+</urlset>
