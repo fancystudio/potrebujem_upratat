@@ -177,6 +177,17 @@ left: -171px;
 	padding-bottom: 26px
 }
 
+.cv h4 {
+color: #715580;
+font-weight: bold;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.cv .well{
+	margin-top: 15px;
+}
+
 .kontakt-form input{
 	color:#f9f4f8;
 }
@@ -358,10 +369,27 @@ padding: 13px 0;
 	margin-left: 8px
 }
 
-.main-content{
+/*.main-content{
 	margin-top: 140px;
 	margin-bottom: 140px;
 	text-align: justify;
+}*/
+
+.main-content {
+margin-top: 100px;
+margin-bottom: 140px;
+text-align: justify;
+padding-left: 60px;
+}
+
+.poukazka {
+display: block;
+float: left;
+position: absolute;
+left: 20px;
+top: 159px;
+/* width: 100px; */
+/* height: auto; */
 }
 
 .main-content h2, h2{
