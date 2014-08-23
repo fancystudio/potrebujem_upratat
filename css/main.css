@@ -69,8 +69,16 @@ body {
 	position: relative;
 	z-index: 1;
 		behavior: url(../ie-css3.htc);	
+}
 
-
+.novinka{
+display: block;
+width: 81px;
+height: 34px;
+position: absolute;
+background: url(../img/novinka.png);
+top: -23px;
+left: 30px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -363,6 +371,12 @@ padding: 13px 0;
 
 .kontakt-form h2{
 	color: white
+}
+
+h3{
+	font-size: 18px;
+color: #715580;
+font-weight: 400;
 }
 
 .main-content p, .main-content ul{
