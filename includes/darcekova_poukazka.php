@@ -21,44 +21,44 @@
 			údaje objednávateľa
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control menoObjednavatelText" name="menoObjednavatelText" placeholder="* Meno">
+					<input type="text" class="form-control menoObjednavatelText" name="menoObjednavatelText" placeholder="* Meno" />
 					<label class="ds-error pre-input menoObjednavatelTextError" style="display:none">Meno objednávatela nebolo vyplnené, alebo bolo vyplnené nesprávne</label>  
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control priezviskoObjednavatelText" name="priezviskoObjednavatelText" placeholder="* Priezvisko">
+					<input type="text" class="form-control priezviskoObjednavatelText" name="priezviskoObjednavatelText" placeholder="* Priezvisko" />
 					<label class="ds-error pre-input priezviskoObjednavatelTextError" style="display:none">Priezvisko objednávatela nebolo vyplnené, alebo bolo vyplnené nesprávne</label>   
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control emailObjednavatelText" name="emailObjednavatelText" placeholder="* Váš email">
+					<input type="text" class="form-control emailObjednavatelText" name="emailObjednavatelText" placeholder="* Váš email" />
 					<label class="ds-error pre-input emailObjednavatelTextError" style="display:none">Email objednávatela nebol vyplnený, alebo bol vyplnený nesprávne</label>   
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control adresaObjednavatelText" name="adresaObjednavatelText" placeholder="* Adresa">
+					<input type="text" class="form-control adresaObjednavatelText" name="adresaObjednavatelText" placeholder="* Adresa" />
 					<label class="ds-error pre-input adresaObjednavatelTextError" style="display:none">Adresa objednávatela nebola vyplnená, alebo bola vyplnená nesprávne</label>   
 				</div>
 			</div>
 			údaje klienta pre ktorého má byť poukážka určená
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control menoPrijimatelText" name="menoPrijimatelText" placeholder="* Meno">
+					<input type="text" class="form-control menoPrijimatelText" name="menoPrijimatelText" placeholder="* Meno" />
 					<label class="ds-error pre-input menoPrijimatelTextError" style="display:none">Meno klienta nebolo vyplnené, alebo bolo vyplnené nesprávne</label>  
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control priezviskoPrijimatelText" name="priezviskoPrijimatelText" placeholder="* Priezvisko">
+					<input type="text" class="form-control priezviskoPrijimatelText" name="priezviskoPrijimatelText" placeholder="* Priezvisko" />
 					<label class="ds-error pre-input priezviskoPrijimatelTextError" style="display:none">Priezvisko klienta nebolo vyplnené, alebo bolo vyplnené nesprávne</label>  
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<input type="text" class="form-control adresaPrijimatelText" name="adresaPrijimatelText" placeholder="* Adresa">
+					<input type="text" class="form-control adresaPrijimatelText" name="adresaPrijimatelText" placeholder="* Adresa" />
 					<label class="ds-error pre-input adresaPrijimatelTextError" style="display:none">Adresa klienta nebola vyplnená, alebo bola vyplnená nesprávne</label>  
 				</div>
 			</div>

@@ -354,6 +354,13 @@ padding: 13px 0;
 	background: transparent
 }
 
+.poukazka .form-control {
+	margin-bottom: 20px;
+	border: 2px solid #72868c;
+	color: #8F8F8F;
+	background: transparent
+}
+
 
 
 .footer p{
