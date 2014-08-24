@@ -392,6 +392,11 @@ top: 159px;
 /* height: auto; */
 }
 
+.poukazka img {
+width: 157px;
+height: auto;
+}
+
 .main-content h2, h2{
 	font-family: hallo_sanslight;
 	color: #715580;	
