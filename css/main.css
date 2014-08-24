@@ -217,6 +217,11 @@ margin-bottom: 20px;
 .dotaznik .form-control::-moz-placeholder { color: #8F8F8F; }
 .dotaznik .form-control:-ms-input-placeholder { color: #8F8F8F; }
 
+.poukazka .form-control::-webkit-input-placeholder { color: #8F8F8F; }
+.poukazka .form-control:-moz-placeholder { color: #8F8F8F; }
+.poukazka .form-control::-moz-placeholder { color: #8F8F8F; }
+.poukazka .form-control:-ms-input-placeholder { color: #8F8F8F; }
+
 
 textarea.form-control {
 	height: 94px;
